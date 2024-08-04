@@ -1,11 +1,119 @@
-body {
-    font-family: Arial;
-    background: url(R.jpg) no-repeat;
-    margin: 0;
+* {
     padding: 0;
-    background-size: cover;
+    margin: 0;
+    box-sizing: border-box;
 }
-table {
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.box-menu {
     width: 100%;
-    mid;
-} 
+}
+
+#header {
+    height: 46px;
+    background: black;
+    position: fixed; /* Fixes the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space between nav and search */
+    align-items: center; /* Vertically align items */
+ /* Adjust padding as needed */
+}
+
+#nav {
+    list-style: none;
+    display: flex; /* Use Flexbox */
+    gap: 20px; /* Space between nav items */
+}
+
+#nav > li {
+    position: relative; /* Needed for positioning subnav */
+}
+
+#nav > li > a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 46px;
+    margin-left: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li:hover > a {
+    color: red;
+    background-color: purple;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent item */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid black;
+    min-width: 160px;
+    box-shadow: 2px 2px 10px aqua;
+    z-index: 1000; /* Ensures subnav stays on top */
+}
+
+.subnav li {
+    display: block;
+    padding: 12px 8px;
+    color: black;
+}
+
+.subnav li:hover {
+    background-color: #FF00FF;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#header .search {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    border-radius: 100%;
+}
+
+.search:hover {
+    background-color: red;
+    padding: 6px; /* Adjusted padding */
+    /* Makes the search icon circular */
+}
+
+/* Optional: Style for other sections */
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(R.jpg) top center/ cover no-repeat;
+
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500px;
+    font-size: 15px;
+}
+#content {
+    height: 1000px; /* Example height */
+    background-color: blue;
+    
+}
+
+#footer {
+
+30
